@@ -3,7 +3,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state({
     name: 'main',
     url: '/',
-    component: 'mainComponent'
+    template: '<div>view</div>'
   });
   $urlRouterProvider.otherwise('/');
 });

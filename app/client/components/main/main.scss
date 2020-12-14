@@ -1,0 +1,11 @@
+#sidebar-wrapper {
+    display: inline-block;
+    width: 250px;
+}
+#main-view {
+    display: inline-block;
+    width: calc(100% - 255px);
+}
+#header-wrapper {
+    width: 100%;
+}

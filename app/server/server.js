@@ -16,6 +16,10 @@ app.get("/app.min.js", function (req, res) {
     res.sendFile("app.min.js", { root: "../../" });
 })
 
+app.get("/umega.min.css", function (req, res) { 
+    res.sendFile("umega.min.css", { root: "../../" });
+})
+
 // Start Server
 app.listen(port, function () {
     console.log( "Express server listening on port " + port);
