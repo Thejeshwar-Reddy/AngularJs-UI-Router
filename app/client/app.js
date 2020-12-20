@@ -11,6 +11,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     views: {
       'messageView@contacts': 'messagesComponent',
       'detailsView@contacts': ''
+    },
+    params: {
+      contact: null
     }
   });
   $urlRouterProvider.otherwise('/contacts');

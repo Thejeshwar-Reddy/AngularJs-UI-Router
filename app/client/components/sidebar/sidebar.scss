@@ -5,16 +5,16 @@
         -moz-box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.75);
         box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.75);
         border-right: 2px solid #ebebeb;
-        padding-top: 10px;
+        background-color: #2A2F32;
+    }
 
-        div {
-            cursor: pointer;
-            width: 100%;
-            padding-left: 10px;
-        }
+    &__option {
+        cursor: pointer;
+        padding: 15px 10px;
+        color: white;
     }
 
     &__selected {
-        color: #262d31;
+        background-color: #222A2F;
     }
 }

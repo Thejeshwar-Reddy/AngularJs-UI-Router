@@ -1,7 +1,9 @@
 let contactsController = function contactsController(
-    $http
+    $http,
+    $state
 ) {
     let $ctrlReference = this;
+    
     let getContactList = () => {
         $http({
             method: 'GET',
@@ -9,6 +11,10 @@ let contactsController = function contactsController(
         }).then(function successCallback(response) {
             $ctrlReference.contactList = response.data;
         })
+    };
+
+    $ctrlReference.route = (contact) => { 
+        $state.go('contacts.person', { contactId: contact.id, contact: contact })
     };
 
     let init = () => {

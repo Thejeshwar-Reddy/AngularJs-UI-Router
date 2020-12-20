@@ -1,10 +1,17 @@
 let messagesController = function messagesController(
     $http,
-    $stateParams
+    $stateParams,
+    $state
 ) {
     let $ctrlReference = this;
     let contactId = $stateParams.contactId;
     
+    if (!$stateParams.contact) {
+        $state.go('contacts');
+    }
+    
+    $ctrlReference.contact = $stateParams.contact;
+
     let getMessages = () => {
         $http({
             method: 'GET',
