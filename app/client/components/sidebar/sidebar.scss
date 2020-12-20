@@ -1,6 +1,20 @@
-#sidebar-wrapper {
-    div {
-        height: calc(100vh - 80px);
-        background-color: #F5F5F5
+.sidebar-wrapper {
+    &__div {
+        height: 100%;
+        -webkit-box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.75);
+        box-shadow: 3px 0px 6px 0px rgba(0,0,0,0.75);
+        border-right: 2px solid #ebebeb;
+        padding-top: 10px;
+
+        div {
+            cursor: pointer;
+            width: 100%;
+            padding-left: 10px;
+        }
+    }
+
+    &__selected {
+        color: #262d31;
     }
 }

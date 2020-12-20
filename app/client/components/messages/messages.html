@@ -1,0 +1,10 @@
+<div class="messages-wraper">
+    <div class="messages-wraper__container">
+        <div class="messages-wraper__content" ng-repeat="message in $ctrl.messageList">
+            <div class="messages-wraper__message"
+                ng-class="{true: 'messages-wraper__sent', false: 'messages-wraper__recieved'}[(message.sender) % 2 === 0]">
+                <div ng-bind="message.message"></div>
+            </div>
+        </div>
+    </div>
+</div>

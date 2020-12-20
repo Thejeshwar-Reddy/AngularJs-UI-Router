@@ -1,9 +1,17 @@
 var app = angular.module('angularApp', ['ui.router']);
 app.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state({
-    name: 'main',
-    url: '/',
-    template: '<div>view</div>'
+    name: 'contacts',
+    url: '/contacts',
+    component: 'contactsComponent'
   });
-  $urlRouterProvider.otherwise('/');
+  $stateProvider.state({
+    name: 'contacts.person',
+    url: '/{contactId}',
+    views: {
+      'messageView@contacts': 'messagesComponent',
+      'detailsView@contacts': ''
+    }
+  });
+  $urlRouterProvider.otherwise('/contacts');
 });

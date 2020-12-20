@@ -1,0 +1,28 @@
+.messages-wraper {
+    width: 70%;
+    height: 100%;
+    overflow-y: auto;
+
+    &__content {
+        margin: 12px 0px;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 8px;
+    }
+
+    &__message {
+        padding: 12px;
+        color: white;
+        width: 80%;
+        border-radius: 5px;
+    }
+
+    &__sent {
+        background-color: #266162;
+        align-self: flex-end;
+    }
+
+    &__recieved {
+        background-color: #262D31;
+    }
+}

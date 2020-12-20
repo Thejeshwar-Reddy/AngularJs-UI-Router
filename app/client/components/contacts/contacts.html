@@ -1,0 +1,12 @@
+<div id="contacts-wrapper">
+    <div id="contacts-wrapper__content">
+        <div id="contacts-wrapper__contact" ng-repeat="contact in $ctrl.contactList" ui-sref="contacts.person({ contactId: {{contact.id}} })">
+            <div ng-bind="contact.name"></div>
+            <div ng-bind="contact.email"></div>
+        </div>
+    </div>
+    <div style="width: 100%;">
+        <ui-view name="messageView"></ui-view>
+        <ui-view name="detailsView"></ui-view>
+    </div>
+</div>

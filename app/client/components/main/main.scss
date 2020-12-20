@@ -1,10 +1,21 @@
-#sidebar-wrapper {
-    display: inline-block;
-    width: 250px;
+#page-wrapper {
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
-#main-view {
-    display: inline-block;
-    width: calc(100% - 255px);
+#main-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - 80px);
+}
+.sidebar-wrapper {
+    width: 200px;
+}
+#view-wrapper {
+    width: calc(100% - 200px);
+    background-color: #F5F5F5
 }
 #header-wrapper {
     width: 100%;

@@ -1,7 +1,9 @@
-<div>
+<div id="page-wrapper">
     <header-component id="header-wrapper"></header-component>
-    <sidebar-component id="sidebar-wrapper"></sidebar-component>
-    <div id="main-view">
-        <ui-view></ui-view>
+    <div id="main-wrapper">
+        <sidebar-component class="sidebar-wrapper"></sidebar-component>
+        <div id="view-wrapper">
+            <ui-view></ui-view>
+        </div>
     </div>
 </div>
