@@ -1,0 +1,4 @@
+node_modules
+app.min.js
+package-lock.json
+umega.min.css

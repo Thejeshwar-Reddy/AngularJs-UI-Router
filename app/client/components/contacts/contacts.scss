@@ -1,0 +1,17 @@
+#contacts-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+  &__content {
+    width: 30%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  &__contact {
+    padding: 12px 8px;
+    border-top: 1px solid #bebebe;
+    cursor: pointer;
+  }
+}

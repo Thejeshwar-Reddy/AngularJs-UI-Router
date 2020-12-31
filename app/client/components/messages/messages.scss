@@ -1,0 +1,50 @@
+.messages-wraper {
+    width: 70%;
+    height: 100%;
+
+    &__container {
+        height: calc(100% - 70px - 100px);
+        overflow-y: auto;
+    }
+
+    &__content {
+        margin: 12px 0px;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 8px;
+    }
+
+    &__message {
+        padding: 12px;
+        color: white;
+        width: 80%;
+        border-radius: 5px;
+    }
+
+    &__sent {
+        background-color: #266162;
+        align-self: flex-end;
+    }
+
+    &__recieved {
+        background-color: #262D31;
+    }
+
+    &__header {
+        height: 70px;
+        background-color: transparent;
+        border-bottom: 1px solid #bebebe;
+        border-right: 1px solid #bebebe;
+
+        div {
+            font-size: 18px;
+            padding: 8px 8px 0px 8px;
+        }
+    }
+
+    &__input {
+        height: 100px;
+        padding: 12px 8px;
+        border: 1px solid #bebebe;
+    }
+}
