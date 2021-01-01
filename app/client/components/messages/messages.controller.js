@@ -1,16 +1,9 @@
 let messagesController = function messagesController(
     $http,
-    $stateParams,
-    $state
+    $stateParams
 ) {
     let $ctrlReference = this;
     let contactId = $stateParams.contactId;
-    
-    if (!$stateParams.contact) {
-        $state.go('contacts');
-    }
-    
-    $ctrlReference.contact = $stateParams.contact;
 
     let getMessages = () => {
         $http({
@@ -30,5 +23,8 @@ let messagesController = function messagesController(
   
 angular.module('angularApp').component('messagesComponent', {
     templateUrl: '/client/components/messages/messages.html',
-    controller: messagesController
+    controller: messagesController,
+    bindings: {
+        contact: '<'
+    }
 });

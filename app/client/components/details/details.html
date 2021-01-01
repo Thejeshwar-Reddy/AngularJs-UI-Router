@@ -1,0 +1,7 @@
+<div class="detail-wrapper">
+    <div class="detail-wrapper__guardian" ng-bind="'Guardian Details:'"></div>
+    <div ng-repeat="(key, value) in $ctrl.details" class="detail-wrapper__row">
+        <div ng-bind="key + ':'"></div>
+        <div ng-bind="value"></div>
+    </div>
+</div>

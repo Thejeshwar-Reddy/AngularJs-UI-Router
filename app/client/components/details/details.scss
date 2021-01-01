@@ -1,0 +1,20 @@
+.detail-wrapper {
+    padding: 10px 0px 0px 8px;
+
+    &__guardian {
+        font-size: 20px;
+        border-bottom: 2px solid #BEBEBE;
+        padding-bottom: 10px;
+    }
+
+    &__row {
+        border-bottom: 1px solid #BEBEBE;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+
+        div:first-child {
+            padding-bottom: 3px;
+        }
+    }
+}
