@@ -1053,6 +1053,117 @@ app.get("/messages/:contactId", function (req, res) {
     res.send(data[req.params.contactId].data);
 });
 
+app.get("/details/:contactId", function (req, res) {
+    let data = {
+        "1": {
+            "first_name": "Abbe",
+            "last_name": "Daldry",
+            "email": "adaldry0@fastcompany.com",
+            "gender": "Male",
+            "address": "641 Fremont Circle"
+        },
+        "2": {
+            "first_name": "Olive",
+            "last_name": "Curteis",
+            "email": "ocurteis1@homestead.com",
+            "gender": "Female",
+            "address": "1 Schlimgen Center"
+        },
+        "3": {
+            "first_name": "Frans",
+            "last_name": "Raspel",
+            "email": "fraspel2@usa.gov",
+            "gender": "Male",
+            "address": "8481 Florence Way"
+        },
+        "4": {
+            "first_name": "Jasun",
+            "last_name": "Donnelly",
+            "email": "jdonnelly3@marriott.com",
+            "gender": "Male",
+            "address": "8335 International Drive"
+        },
+        "5": {
+            "first_name": "Craggy",
+            "last_name": "Fishpond",
+            "email": "cfishpond4@etsy.com",
+            "gender": "Male",
+            "address": "4557 Derek Way"
+        },
+        "6": {
+            "first_name": "Galvin",
+            "last_name": "Charrett",
+            "email": "gcharrett5@marriott.com",
+            "gender": "Male",
+            "address": "8920 Arkansas Place"
+        },
+        "7": {
+            "first_name": "Krystyna",
+            "last_name": "Dobrowolny",
+            "email": "kdobrowolny6@telegraph.co.uk",
+            "gender": "Female",
+            "address": "4 Oakridge Street"
+        },
+        "8": {
+            "first_name": "Vernor",
+            "last_name": "Sepey",
+            "email": "vsepey7@bloglines.com",
+            "gender": "Male",
+            "address": "4 Esch Court"
+        },
+        "9": {
+            "first_name": "Harmony",
+            "last_name": "Thrush",
+            "email": "hthrush8@a8.net",
+            "gender": "Female",
+            "address": "308 Atwood Park"
+        },
+        "10": {
+            "first_name": "Shea",
+            "last_name": "Cringle",
+            "email": "scringle9@princeton.edu",
+            "gender": "Female",
+            "address": "97 Mockingbird Point"
+        },
+        "11": {
+            "first_name": "Bobbe",
+            "last_name": "Moroney",
+            "email": "bmoroneya@vimeo.com",
+            "gender": "Female",
+            "address": "044 John Wall Center"
+        },
+        "12": {
+            "first_name": "Elia",
+            "last_name": "Yankishin",
+            "email": "eyankishinb@aboutads.info",
+            "gender": "Male",
+            "address": "51966 Carberry Hill"
+        },
+        "13": {
+            "first_name": "Parnell",
+            "last_name": "McKennan",
+            "email": "pmckennanc@istockphoto.com",
+            "gender": "Male",
+            "address": "2 Russell Hill"
+        },
+        "14": {
+            "first_name": "Vern",
+            "last_name": "Perris",
+            "email": "vperrisd@mozilla.com",
+            "gender": "Male",
+            "address": "6 Ohio Lane"
+        },
+        "15": {
+            "first_name": "Gabriella",
+            "last_name": "Piscopello",
+            "email": "gpiscopelloe@sciencedirect.com",
+            "gender": "Female",
+            "address": "7 Lyons Center"
+        }
+    }
+    res.send(data[req.params.contactId]);
+});
+
 // Start Server
 app.listen(port, function () {
     console.log("Express server listening on port " + port);

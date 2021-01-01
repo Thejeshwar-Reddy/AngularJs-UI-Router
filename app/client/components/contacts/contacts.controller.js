@@ -1,20 +1,22 @@
 let contactsController = function contactsController(
-    $http,
-    $state
+    $state,
+    contactsFactory,
+    $stateParams
 ) {
     let $ctrlReference = this;
-    
+
     let getContactList = () => {
-        $http({
-            method: 'GET',
-            url: 'http://localhost:3002/contacts'
-        }).then(function successCallback(response) {
+        contactsFactory.getContactList().then((response) => {
             $ctrlReference.contactList = response.data;
         })
     };
 
-    $ctrlReference.route = (contact) => { 
-        $state.go('contacts.person', { contactId: contact.id, contact: contact })
+    $ctrlReference.route = (contact) => {
+        if ($stateParams.contactId == contact.id) {
+            $state.go('contacts.person', { contactId: contact.id }, { reload: true });
+            return;
+        }
+        $state.go('contacts.person', { contactId: contact.id });
     };
 
     let init = () => {
@@ -23,7 +25,7 @@ let contactsController = function contactsController(
 
     init();
 };
-  
+
 angular.module('angularApp').component('contactsComponent', {
     templateUrl: '/client/components/contacts/contacts.html',
     controller: contactsController
