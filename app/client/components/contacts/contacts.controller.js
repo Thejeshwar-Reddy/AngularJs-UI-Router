@@ -19,11 +19,9 @@ let contactsController = function contactsController(
         $state.go('contacts.person', { contactId: contact.id });
     };
 
-    let init = () => {
+    $ctrlReference.$onInit = function () { 
         getContactList();
-    };
-
-    init();
+    }
 };
 
 angular.module('angularApp').component('contactsComponent', {

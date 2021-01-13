@@ -11,11 +11,9 @@ let detailsController = function detailsController(
         })
     }
 
-    let init = () => {
+    $ctrlReference.$onInit = function () { 
         getDetails();
-    };
-
-    init();
+    }
 };
   
 angular.module('angularApp').component('detailsComponent', {
