@@ -13,12 +13,10 @@ let messagesController = function messagesController(
             $ctrlReference.messageList = response.data;
         })
     };
-    
-    let init = () => {
-        getMessages();
-    };
 
-    init();
+    $ctrlReference.$onInit = function () { 
+        getMessages();
+    }
 };
   
 angular.module('angularApp').component('messagesComponent', {
